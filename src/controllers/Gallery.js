@@ -8,23 +8,26 @@ const Gallery = async () => {
   const divElement = document.createElement("div");
   divElement.innerHTML = view;
 
-  const pages = ["branding", "web", "photography", "app"];
-  let dataItems = [{ name: "/", data: [] }];
-  pages.map(async (page) => {
-    let data = await getData(page);
-    let value = {
-      name: page,
-      data,
-    };
-    dataItems.push(value);
-    dataItems[0].data.push(data);
-  });
-
-  console.log(dataItems);
-
   let hash = getHash();
   let route = resolveRoutes(hash);
-  const data = await getData(route);
+  const pages = ["branding", "web", "photography", "app"];
+
+  let data = [];
+
+  if (route == "/") {
+    for (let m = 0; m < pages.length; m++) {
+      let dataPage = await getData(pages[m]);
+      for (let n = 0; n < dataPage.length; n++) {
+        dataPage[n].category_title = pages[m];
+        data.push(dataPage[n]);
+      }
+    }
+  } else {
+    data = await getData(route);
+    data.map((item) => {
+      item.category_title = hash;
+    });
+  }
 
   await masonryLayout(divElement.querySelector("#masonryLayout"), data, 3);
 
