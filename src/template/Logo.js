@@ -1,0 +1,50 @@
+const Logo = () => {
+  const view = `
+    <svg
+    id="Logo"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    height="35"
+    viewBox="0 0 33 35"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          font-size: 8px;
+          fill: #c3d0d8;
+        }
+  
+        .cls-1,
+        .cls-2 {
+          font-family: Montserrat;
+        }
+  
+        .cls-2 {
+          font-size: 19px;
+          fill: #707070;
+          font-weight: 700;
+        }
+      </style>
+    </defs>
+    <text
+      id="CREATIVE_PORTOFLIO"
+      data-name="CREATIVE PORTOFLIO"
+      class="cls-1"
+      x="-160"
+      y="-29"
+    >
+      CREATIVE PORTOFLIO
+    </text>
+    <text id="SNEAK" class="cls-2" x="-160" y="-29">SNEAK</text>
+    <image
+      id="Logo-2"
+      data-name="Logo"
+      width="33"
+      height="35"
+      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAjCAYAAAAaLGNkAAAEnklEQVRYhb2YX2wUVRjFf0N3ayu0BVJuAcUBKkUSaXCqtRiN8cEQX4xRtBKFkBieFEMogsFIEzSthSwP/HkyEkI0cRsxJhoS4gMYidSa1gYfqpVStwk1bKGlbUq3223XfOVbWPZut3QbPC+z891zznf2zs7cO+swCxjX8wFfAm+HQ62xbJ3mWJWZ4V2gWo9ZI+uZMK5ngA6gCBgAysKh1rBFvM8zUacBPtFjncWYDYzrPWpcb+VUFsb1Ko3rTRjXa9TzRj2vtMh3NKXiaw1kmInHgT+N6x3WaU82k0t4BIgAu7S8S8+P6Hgy3xjXE367+lqYKoRgGHgCuGxcr9a43jytbwXkG9eHQ63dUtBjvda3avN5ohO9+gxbHaaZCcFAONT6HLAJeB3oNK73AdAA/AMcTOEf1HqD8jpVtykcan1Wf7xpkSkE+i2/B8qBD4GPgUXAKWA0hTqq9UXKE3656jNi8vrFq2vkPt+WIN6IxYrCY6NLy/LntidqF4eH8jb80VL2VEFhtGHFap/fcaImN/ffwhzf0OB4rCAcjS4Zi8dz93T9FfttaDD3zNqKjvK5BZGEvmNkeI3xP9Az3+dLnpHPnWDgWCLEAr3ni6dKvLG9jabBG5wtr2RV/oPWeAJ/j9zkhYvNVBXO55s166zxJPQCq51goH/ycsgHYK9FU/zQ18vPA/1sW7wsYwCBjAtP+KLLgI+0712/iS+AllRNZGKCfaFLGH8uNQ8vn9oyCcITvuhEnwYt2o+7QjjBgLC3p/IP94S4Mhphn1vKvJwc2y4NhCd80Yk+DbZrv7tDaJALwMnEefdohKM93TxZUMTG4sW2VQYIX3SiF58knNQ+t5HuFt0di8dH5ENt6BLRiQnql6+a8UonfNGJXnwE6rs7lWuFcIKBq2dv9H17bqCP0329bC5ZSvncAqvJvUB0ohcf8RNf8bd6pvMqXVn5xkKf/+uB8THnwroqFvr8Fude0RcbY31bE0U5/nhfbOzNzsvNjdPOhGBoPPZSaHTE2bNs5awCCEQvPuInvhYhXQjjeiW6W4puNku+sxRZQH2i4qv+mUMAB4B8oN/vzNmpS/RsEFGffvU9kDGEcb31wBbgvIidYKArnWiGOKA+EfXdon3sEMb15uhm5SZwIonzmTwysgzQrfoETqj/Ee1nzcQ7QAXwKXA9UXSCAbm3d1r294adqk/guvpXaL87IYzrLdCNqjxVDiXbG9d7pKTp7MvnB/vjM+kufNGJPmXokPap0763Z2K/LuM7wqHWxGYlz7heILHEtwwNvgqMW93SY1z54tmhPnnc2iSJ/w4d2z8528b11gK/A4OyXqnlY3qbXgF+BCZXodeKSzasyMuvSts2CV2RkaZT166e0YoLvAg8BARlA63194FC2X9KiHPA85bT/4ef5F3ylZm0+2Xd028V+3KPWgOKa7Hoe8+0/fqVNZABadeOTIhX14imSbf3qWgGqpxgYEY/4qzeRePVNZUaJFkf1wDNlmAapHtsT5/8VqPjKeXj2QRgli/Ee5NeaAYybZTvWwgnGJC/AeQ1T1Cr51lB7o7Z4Bggi5EcswPwH612nWbBG0v6AAAAAElFTkSuQmCC"
+    />
+  </svg>`;
+  return view;
+};
+
+export default Logo;

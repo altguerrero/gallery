@@ -18,10 +18,12 @@ module.exports = {
   resolve: {
     extensions: [".js"],
     alias: {
+      "@pages": path.resolve(__dirname, "src/pages/"),
       "@utils": path.resolve(__dirname, "src/utils/"),
       "@template": path.resolve(__dirname, "src/template/"),
       "@styles": path.resolve(__dirname, "src/styles/"),
       "@images": path.resolve(__dirname, "src/assets/images"),
+      "@routes": path.resolve(__dirname, "src/routes"),
     },
   },
   module: {
@@ -46,6 +48,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
       },
       {
         test: /\.png/,
