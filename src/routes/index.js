@@ -3,9 +3,9 @@ import Header from "@template/Header";
 import Banner from "@template/Banner";
 import Filter from "@template/Filter";
 // content
-import Gallery from "@pages/Gallery";
-import ImageItem from "@pages/ImageItem";
-import Error404 from "@pages/Error404";
+import Gallery from "../controllers/Gallery.js";
+import ImageItem from "../controllers/ImageItem.js";
+import Error404 from "../controllers/Error404.js";
 // utilitis
 import getHash from "@utils/getHash";
 import resolveRoutes from "@utils/resolveRoutes";
@@ -29,14 +29,13 @@ const router = async () => {
   banner.innerHTML = await Banner();
   filter.innerHTML = await Filter();
 
-  const saludo = () => console.log("hola")
-
   let hash = getHash();
   let route = resolveRoutes(hash);
-  console.log(route);
   let render = routes[route] ? routes[route] : Error404;
+  let result = await render();
+  content.innerHTML = "";
 
-  content.innerHTML = await render();
+  return content.appendChild(result);
 };
 
 export default router;
