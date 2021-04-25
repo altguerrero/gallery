@@ -9,7 +9,10 @@ const Gallery = async () => {
   divElement.innerHTML = view;
 
   let hash = getHash();
+  divElement.id = `#/${hash}`
+
   let route = resolveRoutes(hash);
+
   const pages = ["branding", "web", "photography", "app"];
 
   let data = [];
