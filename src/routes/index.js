@@ -2,6 +2,7 @@
 import Header from "@template/Header";
 import Banner from "@template/Banner";
 import Filter from "@template/Filter";
+import Footer from "@template/Footer";
 // content
 import Gallery from "../controllers/Gallery.js";
 import ImageItem from "../controllers/ImageItem.js";
@@ -24,6 +25,7 @@ const router = async () => {
   const banner = null || document.getElementById("banner");
   const filter = null || document.getElementById("filter");
   const content = null || document.getElementById("content");
+  const footer = null || document.getElementById("footer");
 
   header.innerHTML = await Header();
 
@@ -32,6 +34,9 @@ const router = async () => {
 
   filter.innerHTML = "";
   filter.appendChild(await Filter());
+
+  footer.innerHTML = "";
+  footer.appendChild(await Footer());
 
   // Refactorizar
   const nav = Array.from(document.querySelectorAll(".Header-nav ul li a"));

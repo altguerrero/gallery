@@ -98,7 +98,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  
+
   &-main {
     background-color: var(--main-bg-color);
     height: 50px;
@@ -412,5 +412,46 @@ body {
     padding: 1rem 0;
     position: absolute;
     bottom: 0;
+  }
+}
+
+// footer
+.Footer {
+  &-main {
+    width: 100%;
+    margin: 4rem 0;
+  }
+  &-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  &-brand {
+    color: #c2cfd7;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 2.5rem 0;
+    font-size: 13px;
+    & b {
+      color: var(--primary-color);
+    }
+  }
+  &-item {
+    display: block;
+    margin-right: 1.5rem;
+  }
+  &-link {
+    text-decoration: none;
+    color: #c2cfd7;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  &-icon {
+    width: 18px;
+    height: 18px;
   }
 }
