@@ -1,5 +1,5 @@
-const API = "https://api.unsplash.com";
-const KEY = "9aOLFPb3Ka8cPe8zRwifGVJEcigjV7QpEC4vzPmcz5Y";
+const API = process.env.API;
+const KEY = process.env.KEY;
 const getData = async (query, type) => {
   try {
     let apiURl;
