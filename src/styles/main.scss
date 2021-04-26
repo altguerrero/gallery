@@ -261,17 +261,29 @@ body {
 
 // Buttom
 .buttom {
-  font-size: 10px;
   padding: 1rem 2rem;
   font-family: "Questrial" sans-serif;
   font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &__primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 
   &--contrast {
     background-color: #fff;
     color: var(--primary-color);
     text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.2s;
 
     &:hover {
       opacity: 0.75;
@@ -470,7 +482,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-
   }
   &__buttom {
     position: fixed;
