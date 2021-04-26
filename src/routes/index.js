@@ -27,7 +27,8 @@ const router = async () => {
   const content = null || document.getElementById("content");
   const footer = null || document.getElementById("footer");
 
-  header.innerHTML = await Header();
+  header.innerHTML = "";
+  header.appendChild(await Header());
 
   banner.innerHTML = "";
   banner.appendChild(await Banner());
