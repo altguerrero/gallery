@@ -325,6 +325,7 @@ body {
 .masonry-layout {
   display: grid;
   grid-gap: 1rem;
+  padding: 0 1rem;
 
   &__column-1 {
     grid-template-columns: 1fr;

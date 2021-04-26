@@ -1,4 +1,5 @@
 const masonryLayout = (containerElem, itemsElems, columns) => {
+  containerElem.classList.value = ""
   containerElem.classList.add(
     "container",
     "masonry-layout",

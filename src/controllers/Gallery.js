@@ -9,7 +9,7 @@ const Gallery = async () => {
   divElement.innerHTML = view;
 
   let hash = getHash();
-  divElement.id = `#/${hash}`
+  divElement.id = `#/${hash}`;
 
   let route = resolveRoutes(hash);
 
@@ -32,7 +32,36 @@ const Gallery = async () => {
     });
   }
 
-  await masonryLayout(divElement.querySelector("#masonryLayout"), data, 3);
+  const container = divElement.querySelector("#masonryLayout");
+
+  const small = window.matchMedia("(min-width: 640px)");
+  const medium = window.matchMedia("(min-width: 768px)");
+
+  // Refactorizar
+  const changeColumn = async (col) => {
+    container.innerHTML = "";
+    await masonryLayout(container, data, col);
+  };
+
+  const changeSmall = (mql) => {
+    mql.matches ? changeColumn(2) : changeColumn(1);
+  };
+
+  const changeMedium = (mql) => {
+    mql.matches ? changeColumn(3) : changeColumn(2);
+  };
+
+  small.addListener(changeSmall);
+  medium.addListener(changeMedium);
+
+  if (medium.matches) {
+    changeMedium(medium);
+  } else if (small.matches) {
+    changeSmall(small);
+  } else {
+    changeSmall(small);
+  }
+  // End Refactorizar
 
   return divElement;
 };
